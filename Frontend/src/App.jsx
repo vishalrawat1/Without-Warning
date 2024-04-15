@@ -1,21 +1,22 @@
-import React from 'react'
-import Login from './components/Login'
-import Home from './components/Home'
-import Register from './components/Register'
-import Navbar from './components/Navbar'
-import { BrowserRouter as Router , Routes , Route } from 'react-router-dom';
+import React from "react";
+import Login from "./components/Login";
+import Home from "./components/Home";
+import Register from "./components/Register";
+import Navbar from "./components/Navbar";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 const App = () => {
   return (
     <div>
-      <Navbar/>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-    // <Router>
-    //   <Navbar/>
-    //   <Routes exact path = '/' element={<Home/>}/>
-    //   <Routes/>
-    //   <Routes/>
-    // </Router>
-  )
-}
+  );
+};
 
-export default App
+export default App;
