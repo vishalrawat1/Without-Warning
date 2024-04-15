@@ -9,3 +9,5 @@ adminRoute.route('/login').post(login);
 
 // Export the router
 export default adminRoute;
+
+// everything ok
