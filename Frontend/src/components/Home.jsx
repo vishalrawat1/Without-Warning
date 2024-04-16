@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const Home = () => {
+  const [msg, setMsg] = useState("");
   return (
     <div>
-      <textarea placeholder="Please Enter your Text "></textarea>
+      <textarea
+        placeholder="Please Enter your Text "
+        value={msg}
+        onChange={(e) => setMsg(e.target.value)}
+      ></textarea>
       <button>Submit</button>
     </div>
   );
